@@ -3,28 +3,28 @@ import 'package:flutter/material.dart';
 import '../../../constants.dart';
 
 class ColorDot extends StatelessWidget {
+
   const ColorDot({
-    Key key,
-    this.fillColor,
-    // by default we set it false
-    this.isSelected = false,
-  }) : super(key: key);
+    super.key,
+    required this.fillColor,
+    this.isSelected = false, // by default we set it false
+  });
+
   final Color fillColor;
   final bool isSelected;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin:
-          // left and right padding 8
-          EdgeInsets.symmetric(horizontal: kDefaultPadding / 2.5),
-      padding: EdgeInsets.all(3),
+      margin: const EdgeInsets.symmetric(horizontal: kDefaultPadding / 2.5),
+      // left and right padding 8
+      padding: const EdgeInsets.all(3),
       height: 24,
       width: 24,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         border: Border.all(
-          color: isSelected ? Color(0xFF707070) : Colors.transparent,
+          color: isSelected ? const Color(0xFF707070) : Colors.transparent,
         ),
       ),
       child: Container(

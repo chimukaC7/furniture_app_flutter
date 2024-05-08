@@ -4,14 +4,16 @@ import '../../../constants.dart';
 import 'color_dots.dart';
 
 class ListOfColors extends StatelessWidget {
+
   const ListOfColors({
-    Key key,
-  }) : super(key: key);
+    super.key,
+  }) ;
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: kDefaultPadding),
+
+    return const Padding(
+      padding: EdgeInsets.symmetric(vertical: kDefaultPadding),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[

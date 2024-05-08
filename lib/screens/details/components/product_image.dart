@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 import '../../../constants.dart';
 
 class ProductPoster extends StatelessWidget {
+
   const ProductPoster({
-    Key key,
-    @required this.size,
-    this.image,
-  }) : super(key: key);
+    super.key,
+    required this.size,
+    required this.image,
+  }) ;
 
   final Size size;
   final String image;
@@ -15,7 +16,7 @@ class ProductPoster extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: kDefaultPadding),
+      margin: const EdgeInsets.symmetric(vertical: kDefaultPadding),
       // the height of this container is 80% of our width
       height: size.width * 0.8,
 
@@ -25,7 +26,7 @@ class ProductPoster extends StatelessWidget {
           Container(
             height: size.width * 0.7,
             width: size.width * 0.7,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.white,
               shape: BoxShape.circle,
             ),
