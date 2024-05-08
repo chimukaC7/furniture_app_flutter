@@ -29,25 +29,19 @@ class Body extends StatelessWidget {
                   decoration: const BoxDecoration(
                     color: kBackgroundColor,
                     borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(40),
-                      topRight: Radius.circular(40),
+                      topLeft: Radius.circular(20),
+                      topRight: Radius.circular(20),
                     ),
                   ),
                 ),
                 ListView.builder(
-                  // here we use our demo procuts list
+                  // here we use our demo products list
                   itemCount: products.length,
                   itemBuilder: (context, index) => ProductCard(
                     itemIndex: index,
                     product: products[index],
                     press: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => DetailsScreen(
-                            product: products[index],
-                          ),
-                        ),
+                      Navigator.push(context,MaterialPageRoute(builder: (context) => DetailsScreen( product: products[index],), ),
                       );
                     },
                   ),

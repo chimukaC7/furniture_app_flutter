@@ -20,6 +20,7 @@ class ProductCard extends StatelessWidget {
   Widget build(BuildContext context) {
     // It  will provide us total height and width of our screen
     Size size = MediaQuery.of(context).size;
+
     return Container(
       margin: const EdgeInsets.symmetric(
         horizontal: kDefaultPadding,
